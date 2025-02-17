@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\RentalController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::resource("room", RoomController::class)->middleware("auth");
+Route::resource('rental', RentalController::class)->middleware("auth");
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

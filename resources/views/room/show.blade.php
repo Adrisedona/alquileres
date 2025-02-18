@@ -19,10 +19,10 @@
                     </div>
 
                     <div class="card-body bg-white">
-                        
+
                                 <div class="form-group mb-2 mb20">
                                     <strong>Id Room:</strong>
-                                    {{ $room->id_room }}
+                                    {{ $room->id }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
                                     <strong>Dimension:</strong>

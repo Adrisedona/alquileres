@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="card-body bg-white">
-                        
+
                                 <div class="form-group mb-2 mb20">
                                     <strong>Date:</strong>
                                     {{ $rental->date }}
@@ -37,8 +37,8 @@
                                     {{ $rental->id_room }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Id User:</strong>
-                                    {{ $rental->id_user }}
+                                    <strong>User:</strong>
+                                    {{ $rental->user->name }}
                                 </div>
 
                     </div>

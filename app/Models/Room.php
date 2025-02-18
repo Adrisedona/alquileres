@@ -26,7 +26,7 @@ class Room extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['id_room', 'dimension'];
+    protected $fillable = ['dimension'];
 
 
     /**
@@ -34,7 +34,7 @@ class Room extends Model
      */
     public function rentals()
     {
-        return $this->hasMany(\App\Models\Rental::class, 'id_room', 'id_room');
+        return $this->hasMany(\App\Models\Rental::class, 'id', 'id_room');
     }
 
 }

@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource("room", RoomController::class)->middleware("auth");
-Route::resource('rental', RentalController::class)->middleware("auth");
+Route::resource("rooms", RoomController::class)->middleware("auth");
+Route::resource('rentals', RentalController::class)->middleware("auth");
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

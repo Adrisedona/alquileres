@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('rentals', function (Blueprint $table) {
             $table->engine = "InnoDB";
+            $table->integerIncrements("id")->unique("id");
             $table->date("date");
             $table->time("start_time");
             $table->time("end_time");

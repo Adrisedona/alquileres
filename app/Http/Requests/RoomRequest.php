@@ -22,8 +22,7 @@ class RoomRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'id_room' => 'required',
-			'dimension' => 'required',
+			'dimension' => 'required|min:1',
         ];
     }
 }

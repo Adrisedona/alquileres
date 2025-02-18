@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use DateTime;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class RentalRequest extends FormRequest
 {
@@ -22,11 +24,15 @@ class RentalRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'date' => 'required',
-			'start_time' => 'required',
-			'end_time' => 'required',
-			'id_room' => 'required',
-			'id_user' => 'required',
+			'date' => 'required|after_or_equal:' . (new DateTime('tomorrow'))->format('Y-m-d'),
+			'start_time' => 'required|before:end_time',
+			'end_time' => 'required|after:start_time',
+			'id_room' => Rule::exists('rooms', 'id')->where(function ($query){
+                return $query->whereNotNull("id");
+            }),
+			'id_user' => Rule::exists('users', 'id')->where(function ($query){
+                return $query->whereNotNull("id");
+            })
         ];
     }
 }

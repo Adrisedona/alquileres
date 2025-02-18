@@ -61,7 +61,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="rol" value="0">
+                        <input type="hidden" name="rol" value="{{App\Enums\Rol::User}}">
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">

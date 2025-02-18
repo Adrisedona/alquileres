@@ -22,7 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Rental extends Model
 {
-    
+
     protected $perPage = 20;
 
     /**
@@ -38,15 +38,15 @@ class Rental extends Model
      */
     public function room()
     {
-        return $this->belongsTo(\App\Models\Room::class, 'id_room', 'id_room');
+        return $this->belongsTo(\App\Models\Room::class, 'id_room', 'id');
     }
-    
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {
-        return $this->belongsTo(\App\Models\User::class, 'id_user', 'id_user');
+        return $this->belongsTo(\App\Models\User::class, 'id_user', 'id');
     }
-    
+
 }

@@ -35,12 +35,12 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
-									<th >Date</th>
-									<th >Start Time</th>
-									<th >End Time</th>
-									<th >Id Room</th>
-									<th >Id User</th>
+
+									<th>Date</th>
+									<th>Start Time</th>
+									<th>End Time</th>
+									<th>Id Room</th>
+									<th>User</th>
 
                                         <th></th>
                                     </tr>
@@ -49,12 +49,12 @@
                                     @foreach ($rentals as $rental)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 										<td >{{ $rental->date }}</td>
 										<td >{{ $rental->start_time }}</td>
 										<td >{{ $rental->end_time }}</td>
 										<td >{{ $rental->id_room }}</td>
-										<td >{{ $rental->id_user }}</td>
+										<td >{{ $rental->user->name }}</td>
 
                                             <td>
                                                 <form action="{{ route('rentals.destroy', $rental->id) }}" method="POST">

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->engine = "InnoDB";
-            $table->id("id_room");
+            $table->id();
             $table->integer("dimension", false, true);
             $table->timestamps();
         });

@@ -35,7 +35,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 									<th >Id Room</th>
 									<th >Dimension</th>
 
@@ -46,8 +46,8 @@
                                     @foreach ($rooms as $room)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-										<td >{{ $room->id_room }}</td>
+
+										<td >{{ $room->id }}</td>
 										<td >{{ $room->dimension }}</td>
 
                                             <td>

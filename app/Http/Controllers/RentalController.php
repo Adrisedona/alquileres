@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\Rol;
 use App\Models\Rental;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Requests\RentalRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
@@ -39,7 +41,10 @@ class RentalController extends Controller
     {
         Rental::create($request->validated());
 
-        return Redirect::route('rentals.index')
+        //route for users
+        $route = Auth::user()->rol === Rol::Admin->value ? "rentals.index" : "rentals.create";
+
+        return Redirect::route($route)
             ->with('success', 'Rental created successfully.');
     }
 

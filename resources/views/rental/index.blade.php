@@ -41,6 +41,7 @@
 									<th>End Time</th>
 									<th>Id Room</th>
 									<th>User</th>
+                                    <th>User Email</th>
 
                                         <th></th>
                                     </tr>
@@ -55,6 +56,7 @@
 										<td >{{ $rental->end_time }}</td>
 										<td >{{ $rental->id_room }}</td>
 										<td >{{ $rental->user->name }}</td>
+                                        <td >{{ $rental->user->email }}</td>
 
                                             <td>
                                                 <form action="{{ route('rentals.destroy', $rental->id) }}" method="POST">

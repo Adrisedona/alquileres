@@ -40,6 +40,10 @@
                                     <strong>User:</strong>
                                     {{ $rental->user->name }}
                                 </div>
+                                <div class="form-group mb-2 mb20">
+                                    <strong>User Email:</strong>
+                                    {{ $rental->user->email }}
+                                </div>
 
                     </div>
                 </div>

@@ -13,8 +13,14 @@
                     <div class="card-header">
                         <span class="card-title">{{ __('Create') }} Rental</span>
                     </div>
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success m-4">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('rentals.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('rentals.store') }}" role="form"
+                            enctype="multipart/form-data">
                             @csrf
 
                             @include('rental.form')

@@ -1,3 +1,27 @@
+### Este proyecto ha sido creado usando el frameword Laravel, información al respecto en el resto de este documento.
+
+### Para ejecutar este proyecto una vez descargado, se deben de seguir los siguientes pasos:
+
+1. Renombrar el archivo .env.example a .env y modificarlo tal y como aparece reflejado en el manual de programador.
+1. Abrir una consola desde el directorio raiz del proyecto y ejecutar los siguientes comandos:
+    *  ```console
+        composer install 
+        ```
+    * ```console
+        php artisan key:generate 
+        ```
+    * ```console
+        php artisan migrate 
+        ```
+    * ```console
+        php artisan db:seed 
+        ```
+    * ```console
+        php artisan serve 
+        ```
+En caso de algún error al ejecutar el proyecto tras seguir estos pasos, remitirse al manual de programador.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

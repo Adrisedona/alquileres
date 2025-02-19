@@ -3,9 +3,12 @@
 ### Para ejecutar este proyecto una vez descargado, se deben de seguir los siguientes pasos:
 
 1. Renombrar el archivo .env.example a .env y modificarlo tal y como aparece reflejado en el manual de programador.
-1. Abrir una consola desde el directorio raiz del proyecto y ejecutar los siguientes comandos:
+1. Abrir dos consolas (una para los comandos php artisan y otra para los comandos npm) desde el directorio raiz del proyecto y ejecutar los siguientes comandos:
     *  ```console
         composer install 
+        ```
+    *  ```console
+        npm install 
         ```
     * ```console
         php artisan key:generate 
@@ -15,6 +18,9 @@
         ```
     * ```console
         php artisan db:seed 
+        ```
+    * ```console
+        npm run dev
         ```
     * ```console
         php artisan serve 

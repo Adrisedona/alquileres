@@ -16,6 +16,8 @@ class RentalRequest extends FormRequest
         return true;
     }
 
+    // Rule::unique('rental', 'date')->where('id_user', $this->)
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,7 +26,10 @@ class RentalRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'date' => 'required|after_or_equal:' . (new DateTime('tomorrow'))->format('Y-m-d'),
+			'date' => [
+                'required',
+                'after_or_equal:' . (new DateTime('tomorrow'))->format('Y-m-d')
+            ],
 			'start_time' => 'required|before:end_time',
 			'end_time' => 'required|after:start_time',
 			'id_room' => Rule::exists('rooms', 'id')->where(function ($query){

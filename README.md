@@ -1,4 +1,4 @@
-### Este proyecto ha sido creado usando el frameword Laravel, información al respecto en el resto de este documento.
+### Este proyecto ha sido creado usando el framework Laravel, información al respecto en el resto de este documento.
 
 ### Para ejecutar este proyecto una vez descargado, se deben de seguir los siguientes pasos:
 
